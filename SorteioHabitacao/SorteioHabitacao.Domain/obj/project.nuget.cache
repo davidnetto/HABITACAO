@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mOHHX2553Amls3PJRaQ+JqQfeyWD6+hfVzFOVnWzp4VJInVMv8JGiU+x3X57vHx6eFbYzjQEXSCeQb/9k5he+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David\\Documents\\SORTEIO\\SorteioHabitacao\\SorteioHabitacao.Domain\\SorteioHabitacao.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

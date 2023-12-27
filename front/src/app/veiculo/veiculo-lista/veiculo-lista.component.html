@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="card  mt-2 d-flex align-items-center" >
+        <div class="card-body  text-center">
+          <h2 class="card-subtitle  text-body-secondary ">Sorteio de Habitação</h2>
+          <h1 class=" font-weight-bold">Ganhadores do sorteio</h1>
+        </div>
+      </div>
+      
+      <h1 class=" mt-2 font-weight-bold text-center">Parabéns aos Ganhadores</h1>
+
+      <div class="card  mt-2 d-flex align-items-center" >
+        <div class="card-body  text-center">
+          <h2 class="card-subtitle mb-2 text-body-secondary ">GANHADOR LISTA IDOSO</h2>
+          <table class="text-center col-12">
+            <tr *ngFor="let item of idoso">
+              <td>{{ item.split(",")[1]}} - {{ item.split(",")[0]}}</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+      <div class="card  mt-2 d-flex align-items-center" >
+        <div class="card-body  text-center">
+          <h2 class="card-subtitle mb-2 text-body-secondary ">GANHADOR LISTRA DEFICIENTE FÍSICO</h2>   
+           <table class="text-center col-12">
+            <tr *ngFor="let item of fisico">
+              <td>{{ item.split(",")[1]}} - {{ item.split(",")[0]}}</td>
+            </tr>
+           </table>
+    
+        </div>
+      </div>
+
+      <div class="card  mt-2 d-flex align-items-center" >
+        <div class="card-body  text-center">
+          <h2 class="card-subtitle mb-2 text-body-secondary ">GANHADORES LISTA GERAL</h2>
+          <table class="text-center col-12">
+            <tr *ngFor="let item of geral">
+              <td>{{ item.split(",")[1]}} - {{ item.split(",")[0]}}</td>
+            </tr>
+          </table>
+ 
+        </div>
+      </div>
+
+    </div>
+  </div>
+  

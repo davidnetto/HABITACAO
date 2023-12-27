@@ -1,0 +1,99 @@
+
+<div class="container">
+  <div class="card  d-flex align-items-center" >
+    <div class="card-body  text-center">
+      <h2 class="card-subtitle mb-2 text-body-secondary ">Sorteio de Habitação</h2>
+      <h1 class=" font-weight-bold">Listas dos Participantes do Sorteio</h1>
+      <input id="excelInput" name="excelInput" type="file" (change)="onFileSelected($event)" class="form-control-file">
+
+    </div>
+  </div>
+  
+<div class="row">
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-md-6">
+        <!-- Texto alinhado à esquerda -->
+        <p>Total de Participantes:  {{ count }}</p>
+      </div>
+      <div class="col-md-6 text-end">
+        <!-- Botão alinhado à direita -->
+        <button type="button" (click)="realizarSorteio()" class="btn btn-primary">REALIZAR SORTEIO</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="idosos-tab" data-bs-toggle="tab" href="#idosos">Idosos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="deficiente-fisico-tab" data-bs-toggle="tab" href="#deficiente-fisico">Deficiente Físico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="geral-tab" data-bs-toggle="tab" href="#geral">Geral</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="idosos">
+        <div class="card-body">
+          <div *ngIf="idososData">
+            <table class="table table-bordered">
+              <tr >
+                <th class="col-3 text-center">CPF</th>
+                <th class="col-auto text-center">NOME</th>
+              </tr>
+              <tr *ngFor="let row of idososData">
+                <td class="col-3 text-center" *ngFor="let cell of row">{{ cell.split(",")[1] }}</td>
+                <td class="col-auto text-center" *ngFor="let cell of row">{{ cell.split(",")[0] }}</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="deficiente-fisico">
+        <div class="card-body">
+          <div *ngIf="deficienteFisicoData">
+            <table class="table table-bordered">
+              <tr >
+                <th class="col-3 text-center">CPF</th>
+                <th class="col-auto text-center">NOME</th>
+              </tr>
+              <tr *ngFor="let row of deficienteFisicoData">
+                <td class="col-3 text-center" *ngFor="let cell of row">{{ cell.split(",")[1] }}</td>
+                <td class="col-auto text-center" *ngFor="let cell of row">{{ cell.split(",")[0] }}</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="geral">
+        <div class="card-body">
+          <div *ngIf="geralData">
+            <table class="table table-bordered">
+              <tr >
+                <th class="col-3 text-center">CPF</th>
+                <th class="col-auto text-center">NOME</th>
+              </tr>
+              <tr *ngFor="let row of geralData">
+                <td class="col-3 text-center" *ngFor="let cell of row">{{ cell.split(",")[1] }}</td>
+                <td class="col-auto text-center" *ngFor="let cell of row">{{ cell.split(",")[0] }}</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  
